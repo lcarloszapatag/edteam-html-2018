@@ -4,6 +4,19 @@ append config
     -valor = false;
 
 block banner
+    img(src="/img/portafolio.jpg" alt="escritorio")
 
 block presentation
+    div
+        h1 Contactenos
+        p Escriba su mensaje. Estaremos felices de atenderlo.
+    form(action="")
+        label(for="")
+        input(type="text")
+        label(for="")
+        input(type="text")
+        label(for="")
+        textarea(name="", cols="30", rows="10")
+        input(type="submit")
+    div
     include blocks/redes.pug
