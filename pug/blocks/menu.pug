@@ -1,3 +1,6 @@
 ul(class="list")
     each pagina in paginas
-        li(class="list__item"): a(class="list__item__link" href=pagina+".html")=pagina
+        if ( pagina == sitio) 
+            li(class="list__item active"): a(class="list__item__link" href=pagina+".html")=pagina
+        else
+            li(class="list__item"): a(class="list__item__link" href=pagina+".html")=pagina
