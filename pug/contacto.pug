@@ -1,22 +1,29 @@
 extends template/templates.pug
 
 append config
-    -valor = false;
+    -valor = false; 
+    -sitio = 'contacto';
 
 block banner
     img(src="/img/portafolio.jpg" alt="escritorio")
 
 block presentation
-    div
-        h1 Contactenos
-        p Escriba su mensaje. Estaremos felices de atenderlo.
-    form(action="")
-        label(for="")
-        input(type="text")
-        label(for="")
-        input(type="text")
-        label(for="")
-        textarea(name="", cols="30", rows="10")
-        input(type="submit")
-    div
+    div(class="container-form")
+        div(class="form-header")
+            h1 Contactenos
+            p Escriba su mensaje. Estaremos felices de atenderlo.
+        form(class="form" action="")
+            div(class="form-item")
+                label(for="") Nombres y Apellidos
+                input(type="text" required)
+            div(class="form-item")
+                label(for="") Correo Electronico
+                input(type="text" required)
+            div(class="form-item")
+                label(for="") En que podemos ayudarlos
+                textarea(name="", cols="30", rows="10" required)
+            div(class="form-item")
+                input(class="btn" type="submit" value="enviar")
+    div(Class="box-map")
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124862.757699506!2d-77.18008587743007!3d-12.046192140434613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c84215b82a0b%3A0x3ab3593848bdcf19!2sBosque+El+Olivar+de+San+Isidro!5e0!3m2!1ses-419!2spe!4v1524979153820" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
     include blocks/redes.pug

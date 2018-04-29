@@ -8,10 +8,15 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="description" content=description)
         link(rel="stylesheet" type="text/css" href="/css/normalize.css")
         link(rel="stylesheet" type="text/css" href="/css/estilos.css")
-        title Document
-
+        link(href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet")
+        link(href="https://file.myfontastic.com/QmH5RdXDz9NnsaoL9djN3j/icons.css" rel="stylesheet")
+        if (valor == true)
+            title=name
+        else
+            title #{name} | #{sitio}
     body
         header(class="header")
             div(class="logo")
@@ -20,9 +25,13 @@ html(lang="es")
                 include ../blocks/menu.pug
         div(class="banner")
             block banner
-        section(class="presentation")
-            block presentation
+        if (valor == true)
+            section(class="presentation")
+                block presentation
+        else
+            section(class="presentation presentation-page")
+                block presentation
         footer(class="footer")
-            p creativos abc - todos los derechos reservados
+            p(class="footer__text") Creativos ABC - Todos los derechos reservados
             if (valor == true)
                 include ../blocks/redes.pug

@@ -1,10 +1,12 @@
 extends template/templates.pug
 
+ 
+
 block banner
     img(src="/img/inicio.jpg" alt="joven diseñando una web")
 
 block presentation
-    h1 HTML5 Desde Cero - Proyecto final
-    p Este es el proyecto final creado en el curso HTML5 Desde Cero. El sitio ha sido creado utilizando el motor de plantillas pug y estilos con css plano para hacerlo totalmente responsive.
-    p El curso <span> HTML5 Desde Cero </span> contiene 4 módulos que te llevan desde cero hasta crear este sitio web.
-    p Conoce más del curso e inscribete en <a href="https://ed.team/" target="_blank"> https://escuela.digital/html </a>
+    h1(class="name") HTML5 Desde Cero - Proyecto final
+    p(class="presentation__text") Este es el proyecto final creado en el curso HTML5 Desde Cero. El sitio ha sido creado utilizando el motor de plantillas pug y estilos con css plano para hacerlo totalmente responsive.
+    p(class="presentation__text") El curso <b> HTML5 Desde Cero </b> contiene 4 módulos que te llevan desde cero hasta crear este sitio web.
+    p(class="presentation__text") Conoce más del curso e inscribete en <a class="edteam" href="https://ed.team/" target="_blank"> https://escuela.digital/html </a>

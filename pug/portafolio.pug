@@ -1,13 +1,14 @@
 extends template/templates.pug
 
 append config
-    -valor = false;
+    -valor = false; 
+    -sitio = 'portafolio';
 
 block banner
     img(src="/img/portafolio.jpg" alt="escritorio")
 block presentation
-    div
-        h1 Bienvenidos
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sit commodi iure tempore! Tenetur ducimus voluptatem temporibus iure delectus ad architecto nisi? Quia itaque in doloribus consequuntur necessitatibus ad doloremque!
-        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptate deleniti placeat corrupti explicabo rem dolor tempora ab labore optio quod, et qui natus veritatis iusto ipsa provident! Similique, modi.
+    div(class="presentation-section")
+        h1(class="name") Bienvenidos
+        p(class="presentation__text") Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sit commodi iure tempore! Tenetur ducimus voluptatem temporibus iure delectus ad architecto nisi? Quia itaque in doloribus consequuntur necessitatibus ad doloremque!
+        p(class="presentation__text") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptate deleniti placeat corrupti explicabo rem dolor tempora ab labore optio quod, et qui natus veritatis iusto ipsa provident! Similique, modi.
     include blocks/redes.pug
